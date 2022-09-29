@@ -1,0 +1,143 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ .container{
+    background:linear-gradient(to top right,#000,#1b2026);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+.content1, .content2{
+    border: 2px solid white;
+    display: flex;
+    padding-block: 10px;
+    padding-inline: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content1>h2, .content2>h2{
+    color: #f1bc5a;
+    padding: 5px 0px;
+    margin: 5px 0px;
+}
+.row1, .row2{
+    padding-block: 10px;
+}
+textarea{
+    resize: none;
+    overflow-y: auto;
+    padding: 5px;
+    border-radius: 10px;
+}
+label{
+    color: white;
+    padding: 2px;
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.btn1, .btn2{
+    padding: 5px 10px;
+    margin: 5px 5px;
+    border-radius: 8px;
+    background-color: #f1bc5a;
+    border: none;
+    font-weight: bolder;
+}
+.btn1:hover, .btn2:hover{
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    box-shadow: 0 0.5em 0.5em -0.4em #f1bc5a;
+    transform: translateY(-0.25em);    
+}
+select{
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 10px;
+}
+option{
+    cursor: pointer;
+}
+.tab-container{
+    display: flex;
+    border-radius: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+.tab-head{
+    display: flex;
+    border-radius: 20px;
+    padding: 10px;
+}
+.tab-toggle{
+    border: 2px solid;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+.tab-toggle.active{
+    background-color: #f1bc5a;
+}
+
+.content{
+    overflow-y: auto;
+    text-align: justify;
+}
+.content.active{
+    display: block;
+}
+hr{
+    width: 80%;
+    margin: auto;
+}
+
+@media screen and (max-width:480px){
+    .content1>h2{
+        font-size: 20px;
+    }
+    textarea{
+        width: 93%;
+    }
+    select{
+        width: 93%;
+    }
+    .row1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .row1 br{
+        display: none;
+    }
+}
+@media screen and (max-width:440px){
+    .row2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .row2 br{
+        display: none;
+    }
+    .content2>h2{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:380px){
+    .content1>h2,.content2>h2{
+        font-size: 18px;
+    }
+}
